@@ -12,5 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
+
+
+
+     // Dark Mode Toggle (Zadanie #9)
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-bs-theme', newTheme);
+            themeToggle.querySelector('i').classList.toggle('bi-sun-fill');
+            themeToggle.querySelector('i').classList.toggle('bi-moon-stars-fill');
+        });
+    }
     
 });
