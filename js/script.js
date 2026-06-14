@@ -33,6 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     carousel.classList.add('carousel-dark');
                 }
             }
+
+            const hero = document.getElementById('hero');
+            if (hero) {
+                if (newTheme === 'dark') {
+                    hero.classList.remove('bg-primary');
+                    hero.classList.add('bg-dark');
+                } else {
+                    hero.classList.remove('bg-dark');
+                    hero.classList.add('bg-primary');
+                }
+            }
         });
     }
     
