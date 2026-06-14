@@ -1,0 +1,44 @@
+/* Zmienne projektowe - Runo Leśne */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #27ae60;
+    --accent-color: #e67e22;
+    --text-dark: #2c3e50;
+    --text-light: #ecf0f1;
+    --bg-light: #f8f9fa;
+    --font-main: 'Roboto', sans-serif;
+}
+
+/* Globalne style */
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+section {
+    padding: 80px 0;
+    min-height: 200px; /* Aby puste sekcje były widoczne */
+}
+
+.section-title {
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+/* Utility classes */
+.bg-primary-custom { background-color: var(--primary-color) !important; }
+.bg-secondary-custom { background-color: var(--secondary-color) !important; }
+.text-accent { color: var(--accent-color) !important; }
