@@ -24,6 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.setAttribute('data-bs-theme', newTheme);
             themeToggle.querySelector('i').classList.toggle('bi-sun-fill');
             themeToggle.querySelector('i').classList.toggle('bi-moon-stars-fill');
+
+            const carousel = document.getElementById('carouselAuthors');
+            if (carousel) {
+                if (newTheme === 'dark') {
+                    carousel.classList.remove('carousel-dark');
+                } else {
+                    carousel.classList.add('carousel-dark');
+                }
+            }
         });
     }
     
